@@ -58,7 +58,8 @@ body {
     }
 
     .name-cat {
-        font-size: 3em;
+        font-size: 4em;
+        font-weight: 500;
     }
 
     .cats {
