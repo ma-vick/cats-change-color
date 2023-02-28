@@ -60,6 +60,7 @@ body {
     .name-cat {
         font-size: 3em;
         font-weight: 500;
+        align-self: center;
     }
 
     .cats {

@@ -10,17 +10,17 @@ function printNameCat(cat) {
     nameCat.innerHTML = cat.getAttribute('data-namecat');
 }
 
-for (let i = 0; i < cats.length; i++) {                 // percorre todos os elementos
-    cats[i].addEventListener('click', function() {           // adiciona o eventlistener ao elemento da vez
-        if (!this.classList.contains('selected')) {     // se o elemento atual NÃO contém a classe 'selected'
-            for (var j = 0; j < cats.length; j++) {     // percorra os outros elementos
-                cats[j].classList.remove('selected');   // remova a classe 'selected'
+for (let i = 0; i < cats.length; i++) {
+    cats[i].addEventListener('click', function() {
+        if (!this.classList.contains('selected')) {
+            for (let j = 0; j < cats.length; j++) {
+                cats[j].classList.remove('selected');
             }
-            this.classList.add('selected');             // adicione a classe ao elemento clicado
+            this.classList.add('selected');
             modifyColors(this);
             printNameCat(this);
         } else {
-            this.classList.remove('selected');          // se o elemento contém a classe, remova
+            this.classList.remove('selected');
             modifyColors(cats[0]);
             printNameCat(cats[0]);
             cats[0].classList.add('selected');
